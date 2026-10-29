@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ucapan untuk Indra & Zahro — Agung Ubaidillah</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- AOS (Animasi Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- PARTIKEL EMAS -->
+    <canvas id="partikel"></canvas>
+
+    <!-- ===== 1. HERO / OPENING ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-ornamen hero-ornamen-atas"></div>
+      <div class="hero-ornamen hero-ornamen-bawah"></div>
+
+      <div class="container hero-content">
+        <p class="hero-label" data-aos="fade-down" data-aos-delay="100">
+          Selamat Menempuh Hidup Baru
+        </p>
+
+        <div class="hero-divider" data-aos="zoom-in" data-aos-delay="200">
+          <span></span><i class="fas fa-gem"></i><span></span>
+        </div>
+
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+          Mas Indra Lesmana
+          <span class="hero-amp">&</span>
+          Mba Zahro Ramadhani
+        </h1>
+
+        <p class="hero-date" data-aos="fade-up" data-aos-delay="450">
+          Sebuah ucapan dari <strong>Agung Ubaidillah</strong>
+        </p>
+
+        <button
+          class="btn btn-gold"
+          id="btnBuka"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          <span>Buka Ucapan</span>
+          <i class="fas fa-arrow-down"></i>
+        </button>
+      </div>
+
+      <div class="scroll-hint" data-aos="fade-up" data-aos-delay="800">
+        <span>Gulir</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== 2. UCAPAN & DOA ===== -->
+    <section class="section ucapan" id="ucapan">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-kicker">Pesan Utama</span>
+          <h2 class="section-title">Ucapan & Doa</h2>
+          <div class="section-divider">
+            <span></span><i class="fas fa-feather-alt"></i><span></span>
+          </div>
+        </div>
+
+        <div class="ucapan-card" data-aos="fade-up" data-aos-delay="150">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="ucapan-text">
+            Selamat menikah, Mas Indra dan Mba Zahro. Semoga Allah SWT
+            senantiasa melimpahkan keberkahan, kebahagiaan, dan ketenangan dalam
+            membangun rumah tangga yang sakinah, mawaddah, warahmah.
+          </p>
+          <p class="ucapan-text">
+            Terima kasih telah menjadi sahabat yang luar biasa. Saya mendoakan
+            yang terbaik untuk kalian berdua, hari ini dan seterusnya.
+          </p>
+          <p class="ucapan-sign">— Agung Ubaidillah</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. LAGU SPESIAL ===== -->
+    <section class="section lagu" id="lagu">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-kicker">Hadiah Spesial</span>
+          <h2 class="section-title">Lagu untuk Kalian</h2>
+          <div class="section-divider">
+            <span></span><i class="fas fa-music"></i><span></span>
+          </div>
+          <p class="section-subtitle">
+            Ciptaan Agung Ubaidillah, dipersembahkan untuk Mas Indra & Mba Zahro
+          </p>
+        </div>
+
+        <div class="lagu-card" data-aos="fade-up" data-aos-delay="150">
+          <!-- COVER / POSTER LAGU -->
+          <div class="lagu-cover">
+            <img
+              src="poster.png"
+              alt="Poster Lagu Ciptaan Agung"
+              class="poster-lagu"
+            />
+          </div>
+
+          <!-- KONTEN LAGU -->
+          <div class="lagu-body">
+            <h3 class="lagu-judul">Judul Lagu</h3>
+            <p class="lagu-deskripsi">
+              Lagu ini saya buat sebagai hadiah kecil untuk merayakan hari
+              bahagia kalian. Semoga menjadi kenangan yang selalu diingat.
+            </p>
+
+            <div class="audio-player">
+              <audio id="audioLagu" preload="metadata">
+                <source src="song.mp3" type="audio/mpeg" />
+                Browser Anda tidak mendukung pemutar audio.
+              </audio>
+
+              <button class="btn-play" id="btnPlay" aria-label="Putar lagu">
+                <i class="fas fa-play" id="iconPlay"></i>
+              </button>
+
+              <div class="progress-wrap">
+                <span class="waktu" id="waktuMulai">00:00</span>
+                <input
+                  type="range"
+                  id="progress"
+                  value="0"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                />
+                <span class="waktu" id="waktuTotal">03:25</span>
+              </div>
+            </div>
+
+            <div class="lirik" id="lirik">
+              <h4><i class="fas fa-align-left"></i> Lirik</h4>
+              <p>
+                Di malam sunyi kucari arti Menapaki jalan seorang diri Banyak
+                luka kusimpan sendiri Namun harapan tetap di hati Berulang kali
+                ku terjatuh Meski langkah terasa rapuh Masih kupercaya suatu
+                hari Bahagia kan datang menghampiri Jika nanti kau temukan aku
+                Di ujung lelah perjalanan itu Jangan hanya singgah sesaat Temani
+                langkahku hingga akhir hayat Sebab terlalu lama ku mencari Satu
+                hati yang tak pergi lagi Tempat segala resahku berhenti Tempat
+                hatiku pulang kembali Tak kuminta cinta sempurna Cukup bertahan
+                dalam suka duka Genggam tanganku, tetaplah di sini Jadilah rumah
+                tempatku kembali Setelah jauh langkahku berlalu Semoga kutemukan
+                rumah dalam dirimu
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. HARAPAN ===== -->
+    <section class="section harapan" id="harapan">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-kicker">Doa & Harapan</span>
+          <h2 class="section-title">Untuk Perjalanan Kalian</h2>
+          <div class="section-divider">
+            <span></span><i class="fas fa-heart"></i><span></span>
+          </div>
+        </div>
+
+        <ul class="harapan-list">
+          <li data-aos="fade-up" data-aos-delay="100">
+            <span class="harapan-icon"><i class="fas fa-heart"></i></span>
+            <div>
+              <h4>Cinta yang Tumbuh</h4>
+              <p>Semoga cinta kalian tumbuh semakin kuat setiap hari.</p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <span class="harapan-icon"><i class="fas fa-home"></i></span>
+            <div>
+              <h4>Rumah yang Nyaman</h4>
+              <p>
+                Semoga rumah tangga kalian menjadi tempat pulang yang paling
+                nyaman.
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="300">
+            <span class="harapan-icon"><i class="fas fa-seedling"></i></span>
+            <div>
+              <h4>Rezeki & Keturunan</h4>
+              <p>
+                Semoga selalu diberi kesehatan, rezeki, dan keturunan yang
+                saleh.
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="400">
+            <span class="harapan-icon"><i class="fas fa-infinity"></i></span>
+            <div>
+              <h4>Hingga Akhir Hayat</h4>
+              <p>Semoga Allah menjaga kalian hingga akhir hayat.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 5. CLOSING / PENUTUP ===== -->
+    <section class="section closing" id="closing">
+      <div class="container" data-aos="fade-up">
+        <div class="closing-ornamen"></div>
+        <span class="section-kicker">Penutup</span>
+        <h2 class="section-title">Terima Kasih</h2>
+        <div class="section-divider">
+          <span></span><i class="fas fa-star"></i><span></span>
+        </div>
+
+        <p class="closing-text">
+          Terima kasih sudah membaca ucapan ini. Saya turut berbahagia atas
+          pernikahan kalian. Barakallahu lakuma wa baraka 'alaikuma wa jama'a
+          bainakuma fii khair.
+        </p>
+        <p class="closing-sign">— Agung Ubaidillah</p>
+
+        <div class="share-buttons">
+          <a
+            href="https://wa.me/?text=Selamat%20menikah%20Indra%20%26%20Zahro"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-gold"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <span>Bagikan via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-divider">
+        <span></span><i class="fas fa-gem"></i><span></span>
+      </div>
+      <p>&copy; 2026 Agung Ubaidillah — Ucapan untuk Indra & Zahro.</p>
+    </footer>
+
+    <!-- Library JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <!-- JS Utama -->
+    <script src="script.js"></script>
+  </body>
+</html>
